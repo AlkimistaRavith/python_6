@@ -1,23 +1,33 @@
 def cambiar_salsa(pedido):
-    try:
-        salsas =  {
-            1:"Tomates",
-            2:"Alfredo",
-            3:"Barbecue",
-            4:"Pesto"
+    #dict de salsas disponibles
+    salsas =  {
+        1:"Tomates",
+        2:"Alfredo",
+        3:"Barbecue",
+        4:"Pesto"
 }
-        print("Elige la salsa que prefieres:") 
-        
-        for k, v in salsas.items():
-            print(f"{k}.- {v}")
+    #Bucle para cuando no se selecciona correctamente el tipo de salsa
+    while True:
+        try:
+            print("Elige la salsa que prefieres:") 
+            #Lista de las salsas para escoger.
+            for k, v in salsas.items():
+                print(f"{k}.- {v}")
 
-        opcion = int(input(": "))
+            
+            opcion = int(input("Ingresa el número de la salsa que prefieres para tu masa: "))
 
-        if opcion in salsas:
-            salsa = salsas[opcion]
-            pedido["salsa"] = salsa
-        else:
-            print("opcion no valida")
-    
-    except ValueError:
-        print("opcion no valida")
+            if opcion in salsas:
+                #Para extraer de dict, la salsa seleccionada.
+                salsa = salsas[opcion]
+                #Se cambia la salsa en el pedido.
+                pedido["salsa"] = salsa
+                print(f"Se ha cambiado tu opción a Salsa {salsa}.")
+                #seleccionada la salsa, vuelve al menu principal.
+                break
+            else:
+                #Al ingresar una opcion no disponible.
+                print("La opción ingresada no es válida. Ingresa nuevamente.")
+        #Para errores de ingresos no numericos.
+        except ValueError:
+            print("La opción ingresada no es válida. Ingresa nuevamente.")

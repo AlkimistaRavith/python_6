@@ -1,23 +1,41 @@
 def agregar_ingredientes(pedido):
-    ingredientes =  {
-        1:"Tomate", 
-        2:"Champiñones",
-        3:"Aceituna",
-        4:"Cebolla",
-        5: "Pollo",
-        6: "Jamón",
-        7: "Carne", 
-        8: "Tocino", 
-        9: "Queso"
-}
-    print("la opciones son las siguientes :") 
     
-    for k, v in ingredientes.items():
-        print(f"{k}.- {v}")
+        #dict con la lista de ingredientes para agregar.
+        ingredientes =  {
+            1:"Tomate", 
+            2:"Champiñones",
+            3:"Aceituna",
+            4:"Cebolla",
+            5: "Pollo",
+            6: "Jamón",
+            7: "Carne", 
+            8: "Tocino", 
+            9: "Queso"
+}
 
+        #Bucle para agregar más de un ingrediente a la vez.
+        while True:
+            try:
+                #Muestra las opciones.
+                print("Las opciones son las siguientes:") 
+                for k, v in ingredientes.items():
+                    print(f"{k}.- {v}")
 
-    opcion = int(input(": "))
-
-    if opcion in ingredientes:
-        ingrediente = ingredientes[opcion]
-        pedido["ingredientes"].add(ingrediente)
+                #Pide el ingrediente a agregar
+                opcion = int(input("Escribe el número para agregar el ingrediente (o 0 para salir): "))
+                #para salir de bucle de ingredientes.
+                if opcion == 0:
+                    break
+                elif opcion in ingredientes:
+                    #extrae el ingrediente del dict.
+                    ingrediente = ingredientes[opcion]
+                    #agrega el ingrediente al set() del pedido (en ingredientes)
+                    pedido["ingredientes"].add(ingrediente)
+                    #confirma lo agregado al pedido.
+                    print(f"Has agregado {pedido["ingredientes"]} a tu pedido. \nAgrega otro ingrediente.")
+                else:
+                    #para valores que no están listados.
+                    print("La opción no es válida, ingresa nuevamente.")
+            #Para errores de ingresos no numericos.
+            except ValueError:
+                print("La opción no es válida, ingresa nuevamente.")

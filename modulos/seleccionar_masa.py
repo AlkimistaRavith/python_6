@@ -1,30 +1,33 @@
 
 
 def seleccionar_masa(pedido):
-    try: 
-        opcion = int(input("""
+    while True:
+        try: 
+            opcion = int(input("""
 selecciona la masa 
 1. Masa tradicional.
 2. Masa delgada.
 3. Masa borde de queso.
 """))
-        if opcion == 1 :
-            pedido["masa"] = "tradicional"
-            print(f"Masa {pedido["masa"]} agregada correctamente... ")
-
-        elif opcion == 2 :
-            pedido["masa"] = "delgada"
-            print(f"Masa {pedido["masa"]} agregada correctamente... ")
-
-        elif opcion == 3 :
+            #opciones de masa, si se ingresa un valor erroneo, queda en bucle, se rompe con seleccion valida.
+            if opcion == 1 :
+                pedido["masa"] = "tradicional"
+                print(f"Masa {pedido["masa"]} agregada correctamente... ")
+                break
+            elif opcion == 2 :
+                pedido["masa"] = "delgada"
+                print(f"Masa {pedido["masa"]} agregada correctamente... ")
+                break
+            elif opcion == 3 :
                 pedido["masa"] = "borde de queso"
                 print(f"Masa {pedido["masa"]} agregada correctamente... ")
-
-        else:
-            print("opcion no valida")
+                break
+            else:
+                #Al ingresar una opcion no disponible.
+                print("La opción ingresada no es válida. Ingresa nuevamente.")
+            
+        #Para errores de ingresos no numericos.
+        except ValueError:
+            print("La opción ingresada no es válida. Ingresa nuevamente.")
         
-    
-    except ValueError:
-        print("opcion no valida")
-    
     return pedido
