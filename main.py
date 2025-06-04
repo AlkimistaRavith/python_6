@@ -1,41 +1,46 @@
 from modulos.menu import menu
-from modulos.crear_pedido import crear_bebida
-from modulos.seleccionar_masa import seleccionar_base
+from modulos.crear_pedido import crear_pedido
+from modulos.seleccionar_masa import seleccionar_masa
 from modulos.cambiar_salsa import elegir_endulzante
 from modulos.agregar_ingredientes import agregar_fruta
 from modulos.quitar_ingredientes import quitar_fruta
 
 
 def main():
-    vaso = crear_bebida()
-    
+    pedido = crear_pedido()
+    print("""
+    ----    BIENBENIDO A PIZZA JAT  ----
+Disfruta de un momento innolvidable, prefiere nuestras pizzas.
+¿Qué deseas pedir?
+""")
     
     while True:
         menu()
         opcion = input("opcion")
 
         if opcion == "1":
-            seleccionar_base(vaso)
-            print(vaso)
+            seleccionar_masa(pedido)
+            print(pedido)
              
         
         elif opcion == "2":
-            elegir_endulzante(vaso)
-            print(vaso)
+            elegir_endulzante(pedido)
+            print(pedido)
 
         elif opcion == "3":
-            agregar_fruta(vaso)
-            print(vaso)
+            agregar_fruta(pedido)
+            print(pedido)
 
         elif opcion == "4":
             
-            quitar_fruta(vaso)
-            print(vaso)
+            quitar_fruta(pedido)
+            print(pedido)
 
         elif opcion == "5":
-            print(vaso)
-        else:
-            print("salir")
+            print(pedido)
+        elif opcion == "6":
+            print("gracias por su seleccion <agregar>")
+            break
 
 
 

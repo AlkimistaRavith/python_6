@@ -5,6 +5,6 @@ def menu():
 3. agregar frutas
 4. quitar frutas
 5. mostrar bebida
-6. salir      
+6. salir
        
 """)

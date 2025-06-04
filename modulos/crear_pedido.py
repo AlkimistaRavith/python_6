@@ -1,7 +1,7 @@
-def crear_bebida():
-    vaso = {
-        "base":"",
-        "endulzante":"",
-        "frutas": []
+def crear_pedido():
+    pedido = {
+        "masa":"",
+        "salsa":"",
+        "ingredientes": []
     }
-    return vaso
+    return pedido
