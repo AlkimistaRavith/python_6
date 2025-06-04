@@ -2,7 +2,6 @@
 
 def seleccionar_masa(pedido):
     try: 
-        opcion = 1
         opcion = int(input("""
 selecciona la masa 
 1. Masa tradicional.

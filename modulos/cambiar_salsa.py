@@ -1,19 +1,23 @@
-def elegir_endulzante(vaso):
+def cambiar_salsa(pedido):
+    try:
+        salsas =  {
+            1:"Tomates",
+            2:"Alfredo",
+            3:"Barbecue",
+            4:"Pesto"
+}
+        print("Elige la salsa que prefieres:") 
+        
+        for k, v in salsas.items():
+            print(f"{k}.- {v}")
 
-    endulzante = ["1","2"]
-    opcion = input("""
-selecciona los endulzantes
-1. para Azucar
-2. para Miel
-""")
+        opcion = int(input(": "))
+
+        if opcion in salsas:
+            salsa = salsas[opcion]
+            pedido["salsa"] = salsa
+        else:
+            print("opcion no valida")
     
-    if opcion == endulzante[0]:
-        vaso["endulzante"] = "Azucar"
-        print(f"base de {vaso["endulzante"]} agregado correctamente... ")
-    elif opcion == endulzante[1]:
-        vaso["endulzante"] = "Miel"
-        print(f"base de {vaso["endulzante"]} agregado correctamente... ")
-    else:
-        print("opcion no soportada..")
-
-    return vaso
+    except ValueError:
+        print("opcion no valida")
