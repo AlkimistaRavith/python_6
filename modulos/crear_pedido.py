@@ -2,6 +2,6 @@ def crear_pedido():
     pedido = {
         "masa":"Tradicional",
         "salsa":"de Tomates",
-        "ingredientes": []
+        "ingredientes": set()
     }
     return pedido

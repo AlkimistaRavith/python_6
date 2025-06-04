@@ -1,12 +1,15 @@
-def quitar_fruta(vaso):
-    frutas = vaso["frutas"]
-    print("la opciones para borrar son estas:") 
+def quitar_ingredientes(pedido):
+    #convertir en lista el set
+    ingredientes = list(pedido["ingredientes"])
     
-    for i in frutas:
-        print(f"1{i}")
+    for i, ingr in enumerate(ingredientes , start=1):
+        print(f"{i}.- {ingr}")
+    
+    opcion = int(input("N de ingrediente a quitar: "))
 
-
-    opcion = int(input(": "))
-
-    fruta = frutas[opcion]
-    vaso["frutas"].remove(fruta)
+    if 1 <= opcion <= len(ingredientes):
+        quitar_ingrediente = ingredientes[opcion - 1]
+    else:
+        print("Valor no valido")
+    
+    pedido["ingredientes"].remove(quitar_ingrediente)

@@ -2,8 +2,8 @@ from modulos.menu import menu
 from modulos.crear_pedido import crear_pedido
 from modulos.seleccionar_masa import seleccionar_masa
 from modulos.cambiar_salsa import cambiar_salsa
-from modulos.agregar_ingredientes import agregar_fruta
-from modulos.quitar_ingredientes import quitar_fruta
+from modulos.agregar_ingredientes import agregar_ingredientes
+from modulos.quitar_ingredientes import quitar_ingredientes
 
 
 def main():
@@ -28,12 +28,11 @@ Disfruta de un momento innolvidable, prefiere nuestras pizzas.
             print(pedido)
 
         elif opcion == "3":
-            agregar_fruta(pedido)
+            agregar_ingredientes(pedido)
             print(pedido)
 
         elif opcion == "4":
-            
-            quitar_fruta(pedido)
+            quitar_ingredientes(pedido)
             print(pedido)
 
         elif opcion == "5":
