@@ -4,6 +4,7 @@ from modulos.seleccionar_masa import seleccionar_masa
 from modulos.cambiar_salsa import cambiar_salsa
 from modulos.agregar_ingredientes import agregar_ingredientes
 from modulos.quitar_ingredientes import quitar_ingredientes
+from modulos.mostrar_pedido import mostrar_pedido
 
 
 def main():
@@ -44,7 +45,8 @@ Disfruta de un momento innolvidable, prefiere nuestras pizzas.
 
         elif opcion == "5":
             #para mostrar el pedido - FALTA PRESENTA MEJOR EL PEDIDO Y ESTIMAR TIEMPO DE PREPARACION
-            print(pedido)
+            mostrar_pedido(pedido)
+        
         elif opcion == "6":
             #para finalizar - MODIFICAR EN UNA FUNCIÓN PARA PREGUNTAR SI SE PIDE O SE CANCELA.
             print("gracias por su seleccion <agregar>")
