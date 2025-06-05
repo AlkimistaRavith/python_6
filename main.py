@@ -45,13 +45,15 @@ Disfruta de un momento innolvidable, prefiere nuestras pizzas.
             print(pedido)
 
         elif opcion == "5":
-            #funcion para listar el pedido y mostrar el tiempo de espera estimado.
+            #funcion para listar el pedido.
             mostrar_pedido(pedido)
         
         elif opcion == "6":
+            #funcion para listar el pedido y mostrar el tiempo de espera estimado.
+            mostrar_pedido(pedido)
             #para confirmar o cancelar pedido
-            confirmar_pedido(pedido)
-            break
+            if confirmar_pedido(pedido):
+                break
 
 
 

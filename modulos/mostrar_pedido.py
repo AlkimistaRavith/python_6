@@ -1,7 +1,5 @@
 def mostrar_pedido(pedido):
     ingredientes = list(pedido["ingredientes"])
-    tiempo_extra = len(ingredientes) * 2
-    tiempo_espera = 20 + tiempo_extra
 
     print(f"""
 Tu pedido es el siguiente:
