@@ -5,6 +5,7 @@ from modulos.cambiar_salsa import cambiar_salsa
 from modulos.agregar_ingredientes import agregar_ingredientes
 from modulos.quitar_ingredientes import quitar_ingredientes
 from modulos.mostrar_pedido import mostrar_pedido
+from modulos.confirmar_pedido import confirmar_pedido
 
 
 def main():
@@ -44,12 +45,12 @@ Disfruta de un momento innolvidable, prefiere nuestras pizzas.
             print(pedido)
 
         elif opcion == "5":
-            #para mostrar el pedido - FALTA PRESENTA MEJOR EL PEDIDO Y ESTIMAR TIEMPO DE PREPARACION
+            #funcion para listar el pedido y mostrar el tiempo de espera estimado.
             mostrar_pedido(pedido)
         
         elif opcion == "6":
-            #para finalizar - MODIFICAR EN UNA FUNCIÓN PARA PREGUNTAR SI SE PIDE O SE CANCELA.
-            print("gracias por su seleccion <agregar>")
+            #para confirmar o cancelar pedido
+            confirmar_pedido(pedido)
             break
 
 

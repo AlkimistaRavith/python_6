@@ -11,5 +11,3 @@ ingredientes:
 """)
     for i, ingr in enumerate(ingredientes , start=1):
         print(f"{i}.- {ingr}")
-
-    print(f"\nEl tiempo de espera será de: {tiempo_espera} minutos.")
