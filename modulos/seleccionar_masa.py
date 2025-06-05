@@ -3,7 +3,7 @@
 def seleccionar_masa(pedido):
     while True:
         try: 
-            opcion = int(input("""
+            opcion = int(input("""Menu 1. ESCOGE LA MASA QUE PREFIERAS
 selecciona la masa 
 1. Masa tradicional.
 2. Masa delgada.

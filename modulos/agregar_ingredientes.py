@@ -17,12 +17,12 @@ def agregar_ingredientes(pedido):
         while True:
             try:
                 #Muestra las opciones.
-                print("Las opciones son las siguientes:") 
+                print("Menu 3. AGREGA TUS INGREDIENTES FAVORITOS \nTenemos las siguientes opciones:") 
                 for k, v in ingredientes.items():
                     print(f"{k}.- {v}")
 
                 #Pide el ingrediente a agregar
-                opcion = int(input("Escribe el número para agregar el ingrediente (o 0 para salir): "))
+                opcion = int(input("Escribe el número para agregar el ingrediente (o 0 para volver al menu): "))
                 #para salir de bucle de ingredientes.
                 if opcion == 0:
                     break

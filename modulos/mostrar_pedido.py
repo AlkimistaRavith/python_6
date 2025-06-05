@@ -1,11 +1,9 @@
 def mostrar_pedido(pedido):
     ingredientes = list(pedido["ingredientes"])
-
-    print(f"""
+    print(f"""Menu 5. REVISA TU PEDIDO
 Tu pedido es el siguiente:
 masa: {pedido['masa']}
 salsa: {pedido['salsa']}
-ingredientes:
-""")
-    for i, ingr in enumerate(ingredientes , start=1):
-        print(f"{i}.- {ingr}")
+ingredientes:""")
+    for i in ingredientes:
+        print(f"- {i}")

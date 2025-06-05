@@ -9,7 +9,7 @@ def cambiar_salsa(pedido):
     #Bucle para cuando no se selecciona correctamente el tipo de salsa
     while True:
         try:
-            print("Elige la salsa que prefieres:") 
+            print("Menu 2. CAMBIA LA SALSA DE TU PIZZA") 
             #Lista de las salsas para escoger.
             for k, v in salsas.items():
                 print(f"{k}.- {v}")
