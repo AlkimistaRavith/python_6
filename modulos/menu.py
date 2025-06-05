@@ -1,4 +1,5 @@
 def menu():
+    #Listado de menu de opciones.
     print("""1. Escoge la masa que prefieras.
 2. Cambia la salsa de tu pizza.
 3. Agrega tus ingredientes favoritos.

@@ -1,5 +1,3 @@
-
-
 def seleccionar_masa(pedido):
     while True:
         try: 
@@ -24,10 +22,10 @@ selecciona la masa
                 break
             else:
                 #Al ingresar una opcion no disponible.
-                print("La opción ingresada no es válida. Ingresa nuevamente.")
+                print("El número ingresado no se encuentra en la lista de opciones. \nIngresa tu opción nuevamente.")
             
         #Para errores de ingresos no numericos.
         except ValueError:
-            print("La opción ingresada no es válida. Ingresa nuevamente.")
+            print("La opción ingresada no es válida. Debe ser un número de la lista. \nIngresa tu opción nuevamente.")
         
     return pedido

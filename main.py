@@ -18,7 +18,7 @@ Disfruta de un momento innolvidable, prefiere nuestras pizzas.
 Comencemos a armar tu pizza!""")
     
     while True:
-        #Se muestra el menu (se mostrará mientras se este armando pedido.)
+        #Se muestra el menu
         print("\n¿Qué quieres hacer?")
         menu()
         opcion = input("Ingresa el número para acceder al menú: ")
@@ -46,14 +46,17 @@ Comencemos a armar tu pizza!""")
             mostrar_pedido(pedido)
         
         elif opcion == "6":
-            #funcion para listar el pedido y mostrar el tiempo de espera estimado.
+            #Primero se gatilla opcion 5 automnaticamente, para revisar ingredientes.
             mostrar_pedido(pedido)
-            #para confirmar o cancelar pedido
+            #Para confirmar o para volver al menu
             if confirmar_pedido(pedido):
                 break
+
         elif opcion == "0":
+            #Para cancelar pedido, sin confirmar.
             if cancelar_pedido(pedido):
                 break
+
         else:
             print("Tu selección no es válida. Recuerda ingresar el número del menú al que deseas acceder.")
 
